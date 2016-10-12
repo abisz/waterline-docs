@@ -254,3 +254,11 @@ Model.find({ where: { name: 'foo' }, sort: { 'name': 1 }});
 // Sort by multiple attributes
 Model.find({ where: { name: 'foo' }, sort: { name:  1, age: 0 });
 ```
+
+### Select
+
+Only returns requested attributes instead of the whole item.
+
+```javascript
+Model.find({ where: { name: 'foo' }, select: ['email', 'age']});
+```
